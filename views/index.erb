@@ -7,10 +7,12 @@
     <p>Price:<%= p.price%></p>
     <p>Size:<%= p.size%></p>
     <p><img src="<%= p.path_to_image%> "/> </p>
+    <br/>
+    <button  onclick="addToCart(<%= p.id%>) " class="btn btn-primary " >Add to cart</button>
 
 </div>
 
 <% end %>
 </div>
 
-<%# <button type="button" name="button" class="btn btn-primary" onclick="something()">Click me</button> %>
+<%# <button onclick="something()" class="btn btn-primary " >Click </button> %>
