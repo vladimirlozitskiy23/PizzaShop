@@ -13,7 +13,7 @@ function addToCart(id)
   var x  = window.localStorage.getItem('product_' + id);
   x = x * 1 + 1;
   window.localStorage.setItem('product_' + id, x); 
-  alert("Items in your cart" + cartNumberGetItem());
+  updateOrdersInput();
 }
 
 function cartNumberGetItem()
@@ -29,6 +29,12 @@ function cartNumberGetItem()
     }
   }
   return cnt;
+}
+
+function updateOrdersInput()
+{
+  var orders = cartGetOrders();
+  $('#orders_input').val(orders);
 }
 
 
